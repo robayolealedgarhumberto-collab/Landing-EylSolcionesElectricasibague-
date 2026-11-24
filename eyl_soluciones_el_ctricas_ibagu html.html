@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EyL Soluciones Eléctricas Ibagué - Seguridad, calidad y profesionalismo en cada trabajo. Tu energía, en buenas manos. Teléfonos: 304 577 9006 - 304 584 5142.">
+    <title>EyL Soluciones Eléctricas Ibagué | Tu energía, en buenas manos</title>
+    
+    <!-- Google Fonts: Montserrat para títulos e Inter para lectura -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuración personalizada de colores y tipografía en Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        eyl: {
+                            blue: '#0A2540',        // Azul corporativo profundo
+                            electric: '#0056D2',    // Azul eléctrico vibrante
+                            sky: '#EBF3FE',         // Azul muy claro para fondos sutiles
+                            yellow: '#FACC15',      // Amarillo eléctrico principal
+                            amber: '#EAB308',       // Amarillo dorado hover
+                            black: '#0B0F19',       // Negro carbón de alto contraste
+                            slate: '#1E293B',       // Gris oscuro pizarra
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Estilos personalizados complementarios */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #0B0F19;
+            background-color: #FFFFFF;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Patrón sutil de circuito/cuadrícula técnica en el Hero */
+        .hero-pattern {
+            background-color: #0B0F19;
+            background-image: 
+                radial-gradient(circle at 80% 20%, rgba(0, 86, 210, 0.35) 0%, transparent 45%),
+                radial-gradient(circle at 15% 85%, rgba(250, 204, 21, 0.14) 0%, transparent 40%),
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+        }
+
+        /* Animación suave de aparición al hacer scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Efecto pulso sutil para el botón flotante de WhatsApp */
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); opacity: 0.75; }
+            70% { transform: scale(1.3); opacity: 0; }
+            100% { transform: scale(1.3); opacity: 0; }
+        }
+        .whatsapp-pulse::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 9999px;
+            background-color: #25D366;
+            z-index: -1;
+            animation: pulse-ring 2.2s infinite;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-eyl-yellow selection:text-eyl-black">
+
+    <!-- ===================================================================== -->
+    <!-- BARRA SUPERIOR DE CONTACTO RÁPIDO (TOP BAR)                           -->
+    <!-- ===================================================================== -->
+    <div class="bg-eyl-black text-white text-xs sm:text-sm border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-col md:flex-row items-center justify-between gap-2">
+            <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 sm:gap-6">
+                <!-- Teléfonos directos -->
+                <div class="flex items-center gap-2">
+                    <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-eyl-yellow text-eyl-black">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    </span>
+                    <a href="tel:3045779006" class="hover:text-eyl-yellow transition font-medium">304 577 9006</a>
+                    <span class="text-gray-500">-</span>
+                    <a href="tel:3045845142" class="hover:text-eyl-yellow transition font-medium">304 584 5142</a>
+                </div>
+
+                <!-- Correo electrónico -->
+                <a href="mailto:eylsolucionessas@gmail.com" class="flex items-center gap-2 hover:text-eyl-yellow transition">
+                    <svg class="w-4 h-4 text-eyl-yellow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    <span>eylsolucionessas@gmail.com</span>
+                </a>
+            </div>
+
+            <!-- Ubicación y Web -->
+            <div class="hidden sm:flex items-center gap-4 text-gray-300">
+                <span class="flex items-center gap-1.5">
+                    <svg class="w-4 h-4 text-eyl-yellow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    Ibagué, Tolima • Atención Residencial y Comercial
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- BARRA DE NAVEGACIÓN PRINCIPAL (STICKY HEADER)                         -->
+    <!-- ===================================================================== -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logotipo EyL Soluciones Eléctricas Ibagué -->
+                <a href="#inicio" class="flex items-center gap-3 group focus:outline-none">
+                    <div class="w-11 h-11 rounded-xl bg-eyl-blue flex items-center justify-center shadow-md group-hover:bg-eyl-electric transition-colors relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-eyl-black/40 to-transparent"></div>
+                        <!-- Icono Rayo Amarillo -->
+                        <svg class="w-6 h-6 text-eyl-yellow relative z-10 transform group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-heading font-black text-lg sm:text-xl tracking-tight text-eyl-black leading-none">
+                            EyL <span class="text-eyl-electric">SOLUCIONES</span>
+                        </span>
+                        <span class="text-[11px] sm:text-xs font-bold tracking-widest text-eyl-blue uppercase mt-0.5">
+                            Eléctricas Ibagué
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Menú de navegación Desktop -->
+                <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-eyl-slate">
+                    <a href="#inicio" class="hover:text-eyl-electric transition-colors py-2">Inicio</a>
+                    <a href="#servicios" class="hover:text-eyl-electric transition-colors py-2">Servicios</a>
+                    <a href="#compromiso" class="hover:text-eyl-electric transition-colors py-2">¿Por qué elegirnos?</a>
+                    <a href="#agendar" class="hover:text-eyl-electric transition-colors py-2">Solicitar Cita</a>
+                    <a href="#contacto" class="hover:text-eyl-electric transition-colors py-2">Contacto</a>
+                </nav>
+
+                <!-- Botones CTA Desktop -->
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="tel:3045779006" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border-2 border-eyl-blue text-eyl-blue font-semibold text-sm hover:bg-eyl-blue hover:text-white transition-all">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        <span>304 577 9006</span>
+                    </a>
+                    <a href="#agendar" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-eyl-yellow text-eyl-black font-bold text-sm shadow-md hover:bg-eyl-amber hover:shadow-lg transition-all">
+                        <span>Agendar Cita</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                    </a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <button id="mobile-menu-btn" type="button" aria-label="Abrir menú de navegación" class="lg:hidden inline-flex items-center justify-center p-2.5 rounded-xl text-eyl-black hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-eyl-electric">
+                    <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menú desplegable para dispositivos móviles -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 px-4 pt-3 pb-6 space-y-2 shadow-xl">
+            <a href="#inicio" class="mobile-nav-link block px-4 py-3 rounded-xl font-semibold text-eyl-black hover:bg-eyl-sky hover:text-eyl-electric">Inicio</a>
+            <a href="#servicios" class="mobile-nav-link block px-4 py-3 rounded-xl font-semibold text-eyl-black hover:bg-eyl-sky hover:text-eyl-electric">Servicios Eléctricos</a>
+            <a href="#compromiso" class="mobile-nav-link block px-4 py-3 rounded-xl font-semibold text-eyl-black hover:bg-eyl-sky hover:text-eyl-electric">¿Por qué elegirnos?</a>
+            <a href="#agendar" class="mobile-nav-link block px-4 py-3 rounded-xl font-semibold text-eyl-black hover:bg-eyl-sky hover:text-eyl-electric">Solicitar Cita Técnica</a>
+            <a href="#contacto" class="mobile-nav-link block px-4 py-3 rounded-xl font-semibold text-eyl-black hover:bg-eyl-sky hover:text-eyl-electric">Contacto</a>
+            
+            <div class="pt-3 border-t border-gray-100 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <a href="tel:3045779006" class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-eyl-blue text-white font-bold text-sm">
+                    <svg class="w-4 h-4 text-eyl-yellow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    Llamar: 304 577 9006
+                </a>
+                <a href="#agendar" class="mobile-nav-link flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-eyl-yellow text-eyl-black font-bold text-sm">
+                    Solicitar Visita
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===================================================================== -->
+    <!-- SECCIÓN HERO / ENCABEZADO PRINCIPAL                                   -->
+    <!-- ===================================================================== -->
+    <section id="inicio" class="hero-pattern relative text-white pt-12 pb-20 lg:py-24 overflow-hidden">
+        <!-- Elemento decorativo luminoso -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-eyl-electric/20 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Columna Izquierda: Lema, Eslogan y CTAs -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <!-- Distintivo superior requerido -->
+                    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-eyl-blue/90 border border-eyl-yellow/40 shadow-lg">
+                        <span class="flex h-2.5 w-2.5 relative">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-eyl-yellow opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-eyl-yellow"></span>
+                        </span>
+                        <span class="text-xs sm:text-sm font-extrabold tracking-wider text-eyl-yellow uppercase">
+                            SEGURIDAD, CALIDAD Y PROFESIONALISMO EN CADA TRABAJO
+                        </span>
+                    </div>
+
+                    <!-- Título Principal / Eslogan -->
+                    <h1 class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-tight">
+                        "Tu energía, <br class="hidden sm:inline">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-eyl-yellow via-yellow-300 to-amber-400">
+                            en buenas manos"
+                        </span>
+                    </h1>
+
+                    <!-- Descripción de valor -->
+                    <p class="text-base sm:text-lg lg:text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        En <strong class="text-white font-semibold">EyL Soluciones Eléctricas Ibagué</strong> brindamos soluciones eléctricas integrales para hogares, locales comerciales y empresas en toda la ciudad de Ibagué. Trabajamos bajo estrictas normas técnicas (RETIE) garantizando el bienestar de tu patrimonio.
+                    </p>
+
+                    <!-- Botones de Acción (CTA) -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#agendar" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-eyl-yellow text-eyl-black font-heading font-extrabold text-base shadow-xl shadow-eyl-yellow/20 hover:bg-eyl-amber hover:-translate-y-0.5 transition-all">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            <span>Solicitar Cita Técnica</span>
+                        </a>
+
+                        <a href="tel:3045779006" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-eyl-electric/20 border-2 border-eyl-electric text-white font-bold text-base hover:bg-eyl-electric hover:-translate-y-0.5 transition-all">
+                            <svg class="w-5 h-5 text-eyl-yellow" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                            <span>304 577 9006 - 304 584 5142</span>
+                        </a>
+                    </div>
+
+                    <!-- Indicadores de confianza rápidos -->
+                    <div class="pt-6 border-t border-white/10 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <p class="font-heading font-black text-2xl sm:text-3xl text-eyl-yellow">100%</p>
+                            <p class="text-xs sm:text-sm text-gray-300">Cumplimiento Técnico</p>
+                        </div>
+                        <div>
+                            <p class="font-heading font-black text-2xl sm:text-3xl text-white">Ibagué</p>
+                            <p class="text-xs sm:text-sm text-gray-300">Cobertura Total</p>
+                        </div>
+                        <div>
+                            <p class="font-heading font-black text-2xl sm:text-3xl text-eyl-yellow">Garantía</p>
+                            <p class="text-xs sm:text-sm text-gray-300">En cada instalación</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Tarjeta Visual Técnica / Panel de Control Eléctrico -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-3xl bg-gradient-to-b from-eyl-blue to-eyl-black p-6 sm:p-8 border border-white/15 shadow-2xl">
+                        <!-- Etiqueta flotante superior -->
+                        <div class="flex items-center justify-between pb-6 border-b border-white/10">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-2xl bg-eyl-yellow/15 border border-eyl-yellow/40 flex items-center justify-center text-eyl-yellow">
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                </div>
+                                <div>
+                                    <h2 class="font-heading font-bold text-white text-base sm:text-lg">Asistencia Especializada</h2>
+                                    <p class="text-xs text-eyl-yellow font-medium">EyL Soluciones Eléctricas Ibagué</p>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-bold">
+                                Disponible
+                            </span>
+                        </div>
+
+                        <!-- Lista visual de especialidades destacadas -->
+                        <div class="py-6 space-y-4">
+                            <div class="flex items-start gap-3.5 p-3.5 rounded-2xl bg-white/5 border border-white/10">
+                                <div class="w-8 h-8 rounded-lg bg-eyl-electric flex items-center justify-center shrink-0 mt-0.5">
+                                    <svg class="w-4 h-4 text-eyl-yellow" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-sm text-white">Prevención de Riesgos y Sobrecargas</h3>
+                                    <p class="text-xs text-gray-300 mt-0.5">Protegemos tus electrodomésticos, equipos comerciales y estructura contra cortocircuitos.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3.5 p-3.5 rounded-2xl bg-white/5 border border-white/10">
+                                <div class="w-8 h-8 rounded-lg bg-eyl-electric flex items-center justify-center shrink-0 mt-0.5">
+                                    <svg class="w-4 h-4 text-eyl-yellow" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-sm text-white">Tableros Eléctricos Ordenados y Seguros</h3>
+                                    <p class="text-xs text-gray-300 mt-0.5">Balanceo de cargas, protecciones termomagnéticas certificadas y señalización clara.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3.5 p-3.5 rounded-2xl bg-white/5 border border-white/10">
+                                <div class="w-8 h-8 rounded-lg bg-eyl-electric flex items-center justify-center shrink-0 mt-0.5">
+                                    <svg class="w-4 h-4 text-eyl-yellow" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-sm text-white">Iluminación LED de Alta Eficiencia</h3>
+                                    <p class="text-xs text-gray-300 mt-0.5">Moderniza tus espacios y reduce el consumo energético mensual.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contacto directo dentro de la tarjeta -->
+                        <div class="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+                            <span class="text-gray-300">Contacto directo:</span>
+                            <a href="mailto:eylsolucionessas@gmail.com" class="text-eyl-yellow font-semibold hover:underline">
+                                eylsolucionessas@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- SECCIÓN DE SERVICIOS ELÉCTRICOS                                       -->
+    <!-- ===================================================================== -->
+    <section id="servicios" class="py-20 lg:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Encabezado de sección -->
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-eyl-sky text-eyl-electric font-bold text-xs uppercase tracking-widest mb-3">
+                    Soluciones Integrales en Ibagué
+                </span>
+                <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-eyl-black">
+                    Nuestros <span class="text-eyl-electric">Servicios Eléctricos</span>
+                </h2>
+                <p class="mt-4 text-gray-600 text-base sm:text-lg">
+                    Ejecutamos cada proyecto con materiales certificados, herramientas de precisión y personal altamente calificado para hogares, oficinas, locales comerciales y bodegas.
+                </p>
+            </div>
+
+            <!-- Cuadrícula de Servicios (6 tarjetas) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Servicio 1 -->
+                <article class="reveal group bg-white rounded-3xl p-8 border border-gray-200/80 shadow-sm hover:shadow-xl hover:border-eyl-electric/40 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-eyl-blue text-eyl-yellow flex items-center justify-center mb-6 group-hover:bg-eyl-electric group-hover:scale-105 transition-all shadow-md">
+                            <!-- Icono Casa / Edificio eléctrico -->
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-extrabold text-xl text-eyl-black mb-3 group-hover:text-eyl-electric transition-colors">
+                            Instalaciones Eléctricas Residenciales y Comerciales
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Diseño, cableado estructurado, canalizaciones, tomacorrientes regulados, acometidas y ampliaciones eléctricas para viviendas, apartamentos, locales comerciales y oficinas.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-eyl-blue uppercase tracking-wider">Norma RETIE</span>
+                        <a href="#agendar" onclick="seleccionarServicio('Instalaciones eléctricas residenciales y comerciales')" class="inline-flex items-center gap-1.5 text-sm font-bold text-eyl-electric hover:text-eyl-black transition-colors">
+                            Cotizar servicio
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Servicio 2 -->
+                <article class="reveal group bg-white rounded-3xl p-8 border border-gray-200/80 shadow-sm hover:shadow-xl hover:border-eyl-electric/40 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-eyl-blue text-eyl-yellow flex items-center justify-center mb-6 group-hover:bg-eyl-electric group-hover:scale-105 transition-all shadow-md">
+                            <!-- Icono Diagnóstico / Herramienta -->
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-extrabold text-xl text-eyl-black mb-3 group-hover:text-eyl-electric transition-colors">
+                            Diagnóstico y Reparación de Fallas Eléctricas
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Localización precisa y solución definitiva de cortocircuitos, pérdida de fases, disparos constantes de breakers, fugas de corriente, falsos contactos y caídas de tensión.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-eyl-blue uppercase tracking-wider">Atención Oportuna</span>
+                        <a href="#agendar" onclick="seleccionarServicio('Diagnóstico y reparación de fallas eléctricas')" class="inline-flex items-center gap-1.5 text-sm font-bold text-eyl-electric hover:text-eyl-black transition-colors">
+                            Solicitar revisión
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Servicio 3 -->
+                <article class="reveal group bg-white rounded-3xl p-8 border border-gray-200/80 shadow-sm hover:shadow-xl hover:border-eyl-electric/40 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-eyl-blue text-eyl-yellow flex items-center justify-center mb-6 group-hover:bg-eyl-electric group-hover:scale-105 transition-all shadow-md">
+                            <!-- Icono Alerta / Protección -->
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-extrabold text-xl text-eyl-black mb-3 group-hover:text-eyl-electric transition-colors">
+                            Detección de Sobrecargas y Riesgos Eléctricos
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Inspección preventiva de puntos calientes, medición de cargas, revisión de sistemas de puesta a tierra y corrección de instalaciones antiguas para evitar incendios o daños en equipos.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-eyl-blue uppercase tracking-wider">Seguridad Total</span>
+                        <a href="#agendar" onclick="seleccionarServicio('Detección de sobrecargas y riesgos eléctricos')" class="inline-flex items-center gap-1.5 text-sm font-bold text-eyl-electric hover:text-eyl-black transition-colors">
+                            Agendar inspección
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Servicio 4 -->
+                <article class="reveal group bg-white rounded-3xl p-8 border border-gray-200/80 shadow-sm hover:shadow-xl hover:border-eyl-electric/40 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-eyl-blue text-eyl-yellow flex items-center justify-center mb-6 group-hover:bg-eyl-electric group-hover:scale-105 transition-all shadow-md">
+                            <!-- Icono Bombilla LED -->
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-extrabold text-xl text-eyl-black mb-3 group-hover:text-eyl-electric transition-colors">
+                            Iluminación y Sistemas LED
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Instalación de luminarias LED interiores, exteriores, reflectores, cintas LED arquitectónicas, sensores de movimiento y modernización lumínica para máximo ahorro de energía.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-eyl-blue uppercase tracking-wider">Ahorro Energético</span>
+                        <a href="#agendar" onclick="seleccionarServicio('Iluminación y sistemas LED')" class="inline-flex items-center gap-1.5 text-sm font-bold text-eyl-electric hover:text-eyl-black transition-colors">
+                            Cotizar proyecto
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Servicio 5 -->
+                <article class="reveal group bg-white rounded-3xl p-8 border border-gray-200/80 shadow-sm hover:shadow-xl hover:border-eyl-electric/40 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-eyl-blue text-eyl-yellow flex items-center justify-center mb-6 group-hover:bg-eyl-electric group-hover:scale-105 transition-all shadow-md">
+                            <!-- Icono Tablero Eléctrico -->
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-extrabold text-xl text-eyl-black mb-3 group-hover:text-eyl-electric transition-colors">
+                            Instalación y Organización de Tableros Eléctricos
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Armado, peinado profesional, cambio de cajas de tacos/breakers, balanceo de fases, instalación de protectores de voltaje y rotulación de circuitos para fácil control.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-eyl-blue uppercase tracking-wider">Orden y Control</span>
+                        <a href="#agendar" onclick="seleccionarServicio('Instalación y organización de tableros eléctricos')" class="inline-flex items-center gap-1.5 text-sm font-bold text-eyl-electric hover:text-eyl-black transition-colors">
+                            Solicitar servicio
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Servicio 6 -->
+                <article class="reveal group bg-white rounded-3xl p-8 border border-gray-200/80 shadow-sm hover:shadow-xl hover:border-eyl-electric/40 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-eyl-blue text-eyl-yellow flex items-center justify-center mb-6 group-hover:bg-eyl-electric group-hover:scale-105 transition-all shadow-md">
+                            <!-- Icono Escudo / Mantenimiento -->
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-extrabold text-xl text-eyl-black mb-3 group-hover:text-eyl-electric transition-colors">
+                            Mantenimiento Preventivo y Adecuaciones Técnicas
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Planes periódicos de mantenimiento eléctrico, cambio de redes obsoletas, instalación de duchas eléctricas, aires acondicionados, circuitos dedicados y puesta a tierra.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-eyl-blue uppercase tracking-wider">Confiabilidad</span>
+                        <a href="#agendar" onclick="seleccionarServicio('Mantenimiento preventivo y adecuaciones técnicas')" class="inline-flex items-center gap-1.5 text-sm font-bold text-eyl-electric hover:text-eyl-black transition-colors">
+                            Programar visita
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- SECCIÓN COMPROMISO / PILARES DE VALOR                                 -->
+    <!-- ===================================================================== -->
+    <section id="compromiso" class="py-20 bg-eyl-blue text-white relative overflow-hidden">
+        <div class="absolute right-0 bottom-0 w-80 h-80 bg-eyl-yellow/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 reveal">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-eyl-yellow/20 text-eyl-yellow font-bold text-xs uppercase tracking-widest mb-4">
+                        Nuestro Sello de Garantía
+                    </span>
+                    <h2 class="font-heading font-black text-3xl sm:text-4xl leading-tight">
+                        Seguridad, Calidad y Profesionalismo <span class="text-eyl-yellow">en cada trabajo</span>
+                    </h2>
+                    <p class="mt-4 text-gray-300 leading-relaxed">
+                        Sabemos que la electricidad no admite improvisaciones. En <strong class="text-white">EyL Soluciones Eléctricas Ibagué</strong> nos comprometemos a entregar trabajos limpios, duraderos y 100% seguros para ti, tu familia y tu negocio.
+                    </p>
+                    <div class="mt-8 p-5 rounded-2xl bg-eyl-black/50 border border-eyl-yellow/30">
+                        <p class="font-heading font-bold text-eyl-yellow text-lg">"Tu energía, en buenas manos"</p>
+                        <p class="text-sm text-gray-300 mt-1">Atención directa y asesoría personalizada en Ibagué, Tolima.</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 reveal">
+                    <!-- Pilar 1 -->
+                    <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-eyl-yellow/50 transition">
+                        <div class="w-11 h-11 rounded-xl bg-eyl-yellow text-eyl-black flex items-center justify-center font-heading font-black text-lg mb-4">
+                            01
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-white mb-2">Seguridad Certificada</h3>
+                        <p class="text-sm text-gray-300">Aplicamos protocolos rigurosos de protección eléctrica y normas vigentes para eliminar riesgos de cortocircuito o electrocución.</p>
+                    </div>
+
+                    <!-- Pilar 2 -->
+                    <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-eyl-yellow/50 transition">
+                        <div class="w-11 h-11 rounded-xl bg-eyl-yellow text-eyl-black flex items-center justify-center font-heading font-black text-lg mb-4">
+                            02
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-white mb-2">Materiales de Primera</h3>
+                        <p class="text-sm text-gray-300">Trabajamos únicamente con conductores, protecciones y accesorios certificados que garantizan larga vida útil.</p>
+                    </div>
+
+                    <!-- Pilar 3 -->
+                    <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-eyl-yellow/50 transition">
+                        <div class="w-11 h-11 rounded-xl bg-eyl-yellow text-eyl-black flex items-center justify-center font-heading font-black text-lg mb-4">
+                            03
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-white mb-2">Diagnóstico Transparente</h3>
+                        <p class="text-sm text-gray-300">Evaluamos con precisión la falla o necesidad de tu inmueble y te explicamos claramente la solución y su presupuesto.</p>
+                    </div>
+
+                    <!-- Pilar 4 -->
+                    <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-eyl-yellow/50 transition">
+                        <div class="w-11 h-11 rounded-xl bg-eyl-yellow text-eyl-black flex items-center justify-center font-heading font-black text-lg mb-4">
+                            04
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-white mb-2">Puntualidad y Respaldo</h3>
+                        <p class="text-sm text-gray-300">Cumplimos con los tiempos acordados en cada barrio y sector de Ibagué, respaldando cada obra realizada.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- SECCIÓN FORMULARIO PARA SOLICITAR CITA TÉCNICA                        -->
+    <!-- ===================================================================== -->
+    <section id="agendar" class="py-20 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Información Lateral de Contacto -->
+                <div class="lg:col-span-5 space-y-8 reveal">
+                    <div>
+                        <span class="inline-block px-4 py-1.5 rounded-full bg-eyl-sky text-eyl-electric font-bold text-xs uppercase tracking-widest mb-3">
+                            Agenda tu Visita Técnica
+                        </span>
+                        <h2 class="font-heading font-black text-3xl sm:text-4xl text-eyl-black">
+                            Solicita tu cita con <span class="text-eyl-electric">EyL Soluciones</span>
+                        </h2>
+                        <p class="mt-4 text-gray-600 leading-relaxed">
+                            Completa el formulario con los datos de tu requerimiento eléctrico en Ibagué. Nuestro equipo técnico revisará tu solicitud y se comunicará contigo a la mayor brevedad.
+                        </p>
+                    </div>
+
+                    <!-- Tarjetas de contacto directo -->
+                    <div class="space-y-4">
+                        <div class="p-5 rounded-2xl bg-gray-50 border border-gray-200 flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-eyl-yellow text-eyl-black flex items-center justify-center shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-heading font-bold text-eyl-black text-base">Líneas Telefónicas y WhatsApp</h3>
+                                <div class="mt-1 flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 text-eyl-electric font-bold text-base">
+                                    <a href="tel:3045779006" class="hover:underline">304 577 9006</a>
+                                    <span class="hidden sm:inline text-gray-400">•</span>
+                                    <a href="tel:3045845142" class="hover:underline">304 584 5142</a>
+                                </div>
+                                <p class="text-xs text-gray-500 mt-1">Atención rápida para cotizaciones y emergencias eléctricas.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-5 rounded-2xl bg-gray-50 border border-gray-200 flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-eyl-blue text-eyl-yellow flex items-center justify-center shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-heading font-bold text-eyl-black text-base">Correo Electrónico</h3>
+                                <a href="mailto:eylsolucionessas@gmail.com" class="mt-1 inline-block text-eyl-electric font-semibold hover:underline break-all">
+                                    eylsolucionessas@gmail.com
+                                </a>
+                                <p class="text-xs text-gray-500 mt-1">Envíanos planos, requerimientos comerciales o solicitudes de presupuesto.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-5 rounded-2xl bg-eyl-black text-white flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-eyl-electric text-eyl-yellow flex items-center justify-center shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-heading font-bold text-eyl-yellow text-base">Cobertura en Ibagué</h3>
+                                <p class="text-sm text-gray-300 mt-1">Prestamos servicio a domicilio en toda la zona urbana y sectores aledaños de Ibagué, Tolima.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario Interactivo Validado con JavaScript -->
+                <div class="lg:col-span-7 reveal">
+                    <div class="bg-white rounded-3xl p-6 sm:p-10 border-2 border-gray-200 shadow-xl relative">
+                        <!-- Barra decorativa superior -->
+                        <div class="absolute top-0 left-8 right-8 h-1.5 bg-gradient-to-r from-eyl-blue via-eyl-electric to-eyl-yellow rounded-b-full"></div>
+
+                        <div class="mb-6">
+                            <h3 class="font-heading font-extrabold text-2xl text-eyl-black">Formulario de Solicitud de Cita</h3>
+                            <p class="text-sm text-gray-500 mt-1">Los campos marcados con <span class="text-red-600 font-bold">*</span> son obligatorios.</p>
+                        </div>
+
+                        <!-- Alerta general de errores de validación (oculta por defecto) -->
+                        <div id="form-error-banner" class="hidden mb-6 p-4 rounded-xl bg-red-50 border border-red-300 text-red-800 text-sm flex items-start gap-3">
+                            <svg class="w-5 h-5 text-red-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <div>
+                                <p class="font-bold">Por favor revisa los campos resaltados en rojo:</p>
+                                <p id="form-error-summary" class="text-xs mt-0.5">Algunos datos requieren corrección antes de confirmar tu cita.</p>
+                            </div>
+                        </div>
+
+                        <form id="cita-form" novalidate class="space-y-5">
+                            
+                            <!-- Fila 1: Nombre y Teléfono -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="nombre" class="block text-sm font-bold text-eyl-black mb-1.5">
+                                        Nombre completo <span class="text-red-600">*</span>
+                                    </label>
+                                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Carlos Andrés Gómez"
+                                        class="w-full px-4 py-3 rounded-xl border border-gray-300 text-eyl-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-eyl-electric focus:border-eyl-electric transition">
+                                    <p id="error-nombre" class="hidden text-xs font-semibold text-red-600 mt-1.5"></p>
+                                </div>
+
+                                <div>
+                                    <label for="telefono" class="block text-sm font-bold text-eyl-black mb-1.5">
+                                        Teléfono / WhatsApp <span class="text-red-600">*</span>
+                                    </label>
+                                    <input type="tel" id="telefono" name="telefono" placeholder="Ej: 304 577 9006"
+                                        class="w-full px-4 py-3 rounded-xl border border-gray-300 text-eyl-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-eyl-electric focus:border-eyl-electric transition">
+                                    <p id="error-telefono" class="hidden text-xs font-semibold text-red-600 mt-1.5"></p>
+                                </div>
+                            </div>
+
+                            <!-- Fila 2: Correo y Tipo de Inmueble -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="email" class="block text-sm font-bold text-eyl-black mb-1.5">
+                                        Correo electrónico <span class="text-red-600">*</span>
+                                    </label>
+                                    <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com"
+                                        class="w-full px-4 py-3 rounded-xl border border-gray-300 text-eyl-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-eyl-electric focus:border-eyl-electric transition">
+                                    <p id="error-email" class="hidden text-xs font-semibold text-red-600 mt-1.5"></p>
+                                </div>
+
+                                <div>
+                                    <label for="tipoInmueble" class="block text-sm font-bold text-eyl-black mb-1.5">
+                                        Tipo de propiedad <span class="text-red-600">*</span>
+                                    </label>
+                                    <select id="tipoInmueble" name="tipoInmueble"
+                                        class="w-full px-4 py-3 rounded-xl border border-gray-300 text-eyl-black bg-white focus:outline-none focus:ring-2 focus:ring-eyl-electric focus:border-eyl-electric transition">
+                                        <option value="">Selecciona una opción...</option>
+                                        <option value="Residencial (Casa / Apartamento)">Residencial (Casa / Apartamento)</option>
+                                        <option value="Comercial (Local / Oficina / Restaurante)">Comercial (Local / Oficina / Restaurante)</option>
+                                        <option value="Industrial / Bodega / Copropiedad">Industrial / Bodega / Copropiedad</option>
+                                    </select>
+                                    <p id="error-tipoInmueble" class="hidden text-xs font-semibold text-red-600 mt-1.5"></p>
+                                </div>
+                            </div>
+
+                            <!-- Fila 3: Servicio requerido y Fecha preferida -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="servicio" class="block text-sm font-bold text-eyl-black mb-1.5">
+                                        Servicio eléctrico requerido <span class="text-red-600">*</span>
+                                    </label>
+                                    <select id="servicio" name="servicio"
+                                        class="w-full px-4 py-3 rounded-xl border border-gray-300 text-eyl-black bg-white focus:outline-none focus:ring-2 focus:ring-eyl-electric focus:border-eyl-electric transition">
+                                        <option value="">Selecciona un servicio...</option>
+                                        <option value="Instalaciones eléctricas residenciales y comerciales">Instalaciones eléctricas residenciales y comerciales</option>
+                                        <option value="Diagnóstico y reparación de fallas eléctricas">Diagnóstico y reparación de fallas eléctricas</option>
+                                        <option value="Detección de sobrecargas y riesgos eléctricos">Detección de sobrecargas y riesgos eléctricos</option>
+                                        <option value="Iluminación y sistemas LED">Iluminación y sistemas LED</option>
+                                        <option value="Instalación y organización de tableros eléctricos">Instalación y organización de tableros eléctricos</option>
+                                        <option value="Mantenimiento preventivo y adecuaciones técnicas">Mantenimiento preventivo y adecuaciones técnicas</option>
+                                        <option value="Otro servicio eléctrico">Otro servicio eléctrico</option>
+                                    </select>
+                                    <p id="error-servicio" class="hidden text-xs font-semibold text-red-600 mt-1.5"></p>
+                                </div>
+
+                                <div>
+                                    <label for="fecha" class="block text-sm font-bold text-eyl-black mb-1.5">
+                                        Fecha preferida de visita <span class="text-red-600">*</span>
+                                    </label>
+                                    <input type="date" id="fecha" name="fecha"
+                                        class="w-full px-4 py-3 rounded-xl border border-gray-300 text-eyl-black bg-white focus:outline-none focus:ring-2 focus:ring-eyl-electric focus:border-eyl-electric transition">
+                                    <p id="error-fecha" class="hidden text-xs font-semibold text-red-600 mt-1.5"></p>
+                                </div>
+                            </div>
+
+                            <!-- Fila 4: Dirección o Barrio en Ibagué -->
+                            <div>
+                                <label for="direccion" class="block text-sm font-bold text-eyl-black mb-1.5">
+                                    Barrio o dirección en Ibagué <span class="text-red-600">*</span>
+                                </label>
+                                <input type="text" id="direccion" name="direccion" placeholder="Ej: Barrio Cádiz, La Pola, El Vergel, Jordán, Centro..."
+                                    class="w-full px-4 py-3 rounded-xl border border-gray-300 text-eyl-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-eyl-electric focus:border-eyl-electric transition">
+                                <p id="error-direccion" class="hidden text-xs font-semibold text-red-600 mt-1.5"></p>
+                            </div>
+
+                            <!-- Fila 5: Descripción del problema o proyecto -->
+                            <div>
+                                <label for="mensaje" class="block text-sm font-bold text-eyl-black mb-1.5">
+                                    Descripción del trabajo o falla eléctrica <span class="text-red-600">*</span>
+                                </label>
+                                <textarea id="mensaje" name="mensaje" rows="3" placeholder="Cuéntanos brevemente qué necesitas (ej: revisión de tablero, instalación de luminarias LED, falla en tomas, etc.)"
+                                    class="w-full px-4 py-3 rounded-xl border border-gray-300 text-eyl-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-eyl-electric focus:border-eyl-electric transition"></textarea>
+                                <p id="error-mensaje" class="hidden text-xs font-semibold text-red-600 mt-1.5"></p>
+                            </div>
+
+                            <!-- Botón de envío -->
+                            <div class="pt-2">
+                                <button type="submit" class="w-full py-4 px-6 rounded-xl bg-eyl-blue hover:bg-eyl-electric text-white font-heading font-extrabold text-base shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2.5 group">
+                                    <svg class="w-5 h-5 text-eyl-yellow group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                                    <span>Confirmar Solicitud de Cita</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- MODAL DE CONFIRMACIÓN DE CITA (MOSTRADO TRAS VALIDAR EL FORMULARIO)   -->
+    <!-- ===================================================================== -->
+    <div id="confirmacion-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-eyl-black/80 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border-2 border-eyl-yellow relative transform transition-all">
+            
+            <!-- Icono de éxito -->
+            <div class="w-16 h-16 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4">
+                <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                </svg>
+            </div>
+
+            <div class="text-center">
+                <span id="radicado-badge" class="inline-block px-3 py-1 rounded-full bg-eyl-sky text-eyl-electric font-bold text-xs uppercase tracking-wider mb-2">
+                    Radicado #EYL-0000
+                </span>
+                <h3 id="modal-title" class="font-heading font-black text-2xl text-eyl-black">
+                    ¡Solicitud Validada y Registrada!
+                </h3>
+                <p class="text-sm text-gray-600 mt-2">
+                    Gracias por confiar en <strong class="text-eyl-black">EyL Soluciones Eléctricas Ibagué</strong>. Hemos recibido los detalles de tu cita:
+                </p>
+            </div>
+
+            <!-- Resumen dinámico de datos -->
+            <div id="resumen-cita" class="mt-5 p-4 rounded-2xl bg-gray-50 border border-gray-200 text-sm space-y-2 text-eyl-slate">
+                <!-- Se llena dinámicamente con JavaScript -->
+            </div>
+
+            <!-- Botones de acción del Modal -->
+            <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                <a id="btn-enviar-whatsapp" href="#" target="_blank" rel="noopener noreferrer" class="flex-1 py-3.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm text-center shadow-md transition flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+                    <span>Enviar por WhatsApp</span>
+                </a>
+                <button type="button" id="btn-cerrar-modal" class="py-3.5 px-6 rounded-xl bg-eyl-black hover:bg-gray-800 text-white font-bold text-sm transition">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- PIE DE PÁGINA (FOOTER)                                                -->
+    <!-- ===================================================================== -->
+    <footer id="contacto" class="bg-eyl-black text-white border-t-4 border-eyl-yellow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+                
+                <!-- Marca y Eslogan -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-11 h-11 rounded-xl bg-eyl-electric flex items-center justify-center">
+                            <svg class="w-6 h-6 text-eyl-yellow" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="font-heading font-black text-xl tracking-tight text-white block leading-none">
+                                EyL SOLUCIONES
+                            </span>
+                            <span class="text-xs font-bold tracking-widest text-eyl-yellow uppercase mt-1 block">
+                                Eléctricas Ibagué
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-eyl-yellow font-heading font-bold text-sm uppercase tracking-wide pt-1">
+                        SEGURIDAD, CALIDAD Y PROFESIONALISMO EN CADA TRABAJO
+                    </p>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        "Tu energía, en buenas manos". Especialistas en instalaciones eléctricas residenciales y comerciales, iluminación LED, tableros eléctricos y diagnóstico preventivo en Ibagué, Tolima.
+                    </p>
+                </div>
+
+                <!-- Enlaces Rápidos -->
+                <div class="lg:col-span-3 space-y-4">
+                    <h4 class="font-heading font-bold text-base text-white uppercase tracking-wider">Navegación</h4>
+                    <ul class="space-y-2.5 text-sm text-gray-400">
+                        <li><a href="#inicio" class="hover:text-eyl-yellow transition">Inicio</a></li>
+                        <li><a href="#servicios" class="hover:text-eyl-yellow transition">Servicios Eléctricos</a></li>
+                        <li><a href="#compromiso" class="hover:text-eyl-yellow transition">¿Por qué elegirnos?</a></li>
+                        <li><a href="#agendar" class="hover:text-eyl-yellow transition">Solicitar Cita Técnica</a></li>
+                    </ul>
+                </div>
+
+                <!-- Información Oficial de Contacto -->
+                <div class="lg:col-span-4 space-y-4">
+                    <h4 class="font-heading font-bold text-base text-white uppercase tracking-wider">Contacto Directo</h4>
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-eyl-yellow shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                            <div>
+                                <span class="block text-xs text-gray-400">Teléfonos / WhatsApp:</span>
+                                <a href="tel:3045779006" class="font-bold text-white hover:text-eyl-yellow">304 577 9006</a>
+                                <span class="mx-1 text-gray-500">-</span>
+                                <a href="tel:3045845142" class="font-bold text-white hover:text-eyl-yellow">304 584 5142</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-eyl-yellow shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            <div>
+                                <span class="block text-xs text-gray-400">Correo Electrónico:</span>
+                                <a href="mailto:eylsolucionessas@gmail.com" class="font-medium text-white hover:text-eyl-yellow break-all">eylsolucionessas@gmail.com</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-eyl-yellow shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                            <div>
+                                <span class="block text-xs text-gray-400">Sitio Web & Ubicación:</span>
+                                <span class="text-white font-medium">EyL Soluciones Eléctricas Ibagué • Ibagué, Tolima</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+                <p>&copy; <span id="current-year"></span> EyL Soluciones Eléctricas Ibagué. Todos los derechos reservados.</p>
+                <p class="text-gray-500">Servicios Eléctricos Profesionales en Ibagué, Tolima.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================================================================== -->
+    <!-- BOTÓN FLOTANTE DE WHATSAPP                                            -->
+    <!-- ===================================================================== -->
+    <a href="https://wa.me/573045779006?text=Hola%20EyL%20Soluciones%20El%C3%A9ctricas%20Ibagu%C3%A9,%20quisiera%20solicitar%20informaci%C3%B3n%20sobre%20un%20servicio%20el%C3%A9ctrico." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Contactar por WhatsApp a EyL Soluciones Eléctricas Ibagué"
+       class="whatsapp-pulse fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-[#25D366] text-white shadow-2xl flex items-center justify-center hover:scale-110 transition-transform">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+        </svg>
+    </a>
+
+    <!-- ===================================================================== -->
+    <!-- JAVASCRIPT: NAVEGACIÓN, ANIMACIONES Y VALIDACIÓN DE FORMULARIO        -->
+    <!-- ===================================================================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Año dinámico en el footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // 2. Configurar fecha mínima en el selector de fecha (hoy)
+            const fechaInput = document.getElementById('fecha');
+            const hoy = new Date().toISOString().split('T')[0];
+            fechaInput.setAttribute('min', hoy);
+
+            // 3. Menú Móvil Responsive
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('menu-icon-open');
+            const iconClose = document.getElementById('menu-icon-close');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+            function toggleMobileMenu() {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                if (isHidden) {
+                    mobileMenu.classList.remove('hidden');
+                    iconOpen.classList.add('hidden');
+                    iconClose.classList.remove('hidden');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    iconOpen.classList.remove('hidden');
+                    iconClose.classList.add('hidden');
+                }
+            }
+
+            mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    iconOpen.classList.remove('hidden');
+                    iconClose.classList.add('hidden');
+                });
+            });
+
+            // 4. Animaciones suaves al hacer scroll (IntersectionObserver)
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // 5. Lógica y Validación del Formulario de Solicitud de Cita
+            const form = document.getElementById('cita-form');
+            const errorBanner = document.getElementById('form-error-banner');
+            const modal = document.getElementById('confirmacion-modal');
+            const btnCerrarModal = document.getElementById('btn-cerrar-modal');
+
+            // Función auxiliar para mostrar u ocultar error en un campo específico
+            function setFieldError(inputId, errorId, message) {
+                const input = document.getElementById(inputId);
+                const errorText = document.getElementById(errorId);
+
+                if (message) {
+                    input.classList.remove('border-gray-300', 'focus:border-eyl-electric', 'focus:ring-eyl-electric');
+                    input.classList.add('border-red-500', 'bg-red-50/40', 'focus:border-red-500', 'focus:ring-red-500');
+                    errorText.textContent = message;
+                    errorText.classList.remove('hidden');
+                    return false;
+                } else {
+                    input.classList.remove('border-red-500', 'bg-red-50/40', 'focus:border-red-500', 'focus:ring-red-500');
+                    input.classList.add('border-gray-300', 'focus:border-eyl-electric', 'focus:ring-eyl-electric');
+                    errorText.textContent = '';
+                    errorText.classList.add('hidden');
+                    return true;
+                }
+            }
+
+            // Función principal de validación del formulario
+            function validarFormularioCita() {
+                let esValido = true;
+
+                // Obtener valores limpios
+                const nombre = document.getElementById('nombre').value.trim();
+                const telefono = document.getElementById('telefono').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const tipoInmueble = document.getElementById('tipoInmueble').value;
+                const servicio = document.getElementById('servicio').value;
+                const fecha = document.getElementById('fecha').value;
+                const direccion = document.getElementById('direccion').value.trim();
+                const mensaje = document.getElementById('mensaje').value.trim();
+
+                // Validar Nombre completo (mínimo 3 caracteres y solo letras/espacios)
+                if (nombre === '') {
+                    esValido = setFieldError('nombre', 'error-nombre', 'Por favor ingresa tu nombre completo.') && esValido;
+                } else if (nombre.length < 3) {
+                    esValido = setFieldError('nombre', 'error-nombre', 'El nombre debe tener al menos 3 caracteres.') && esValido;
+                } else {
+                    setFieldError('nombre', 'error-nombre', '');
+                }
+
+                // Validar Teléfono / WhatsApp (solo dígitos, espacios o +, mínimo 7 dígitos y máximo 15)
+                const soloDigitos = telefono.replace(/\D/g, '');
+                if (telefono === '') {
+                    esValido = setFieldError('telefono', 'error-telefono', 'Ingresa un número de teléfono o WhatsApp de contacto.') && esValido;
+                } else if (soloDigitos.length < 7 || soloDigitos.length > 15) {
+                    esValido = setFieldError('telefono', 'error-telefono', 'Ingresa un número válido de teléfono (ej: 3045779006).') && esValido;
+                } else {
+                    setFieldError('telefono', 'error-telefono', '');
+                }
+
+                // Validar Correo Electrónico con expresión regular estándar
+                const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+                if (email === '') {
+                    esValido = setFieldError('email', 'error-email', 'Por favor ingresa tu correo electrónico.') && esValido;
+                } else if (!regexEmail.test(email)) {
+                    esValido = setFieldError('email', 'error-email', 'El formato del correo electrónico no es válido.') && esValido;
+                } else {
+                    setFieldError('email', 'error-email', '');
+                }
+
+                // Validar Tipo de propiedad
+                if (tipoInmueble === '') {
+                    esValido = setFieldError('tipoInmueble', 'error-tipoInmueble', 'Selecciona el tipo de propiedad.') && esValido;
+                } else {
+                    setFieldError('tipoInmueble', 'error-tipoInmueble', '');
+                }
+
+                // Validar Servicio requerido
+                if (servicio === '') {
+                    esValido = setFieldError('servicio', 'error-servicio', 'Selecciona el servicio eléctrico que necesitas.') && esValido;
+                } else {
+                    setFieldError('servicio', 'error-servicio', '');
+                }
+
+                // Validar Fecha preferida
+                if (fecha === '') {
+                    esValido = setFieldError('fecha', 'error-fecha', 'Selecciona una fecha preferida para la visita.') && esValido;
+                } else if (fecha < hoy) {
+                    esValido = setFieldError('fecha', 'error-fecha', 'La fecha seleccionada no puede ser anterior al día de hoy.') && esValido;
+                } else {
+                    setFieldError('fecha', 'error-fecha', '');
+                }
+
+                // Validar Dirección o barrio en Ibagué
+                if (direccion === '') {
+                    esValido = setFieldError('direccion', 'error-direccion', 'Indica el barrio o dirección en Ibagué.') && esValido;
+                } else if (direccion.length < 4) {
+                    esValido = setFieldError('direccion', 'error-direccion', 'Por favor especifica un poco más la ubicación o barrio.') && esValido;
+                } else {
+                    setFieldError('direccion', 'error-direccion', '');
+                }
+
+                // Validar Descripción del trabajo
+                if (mensaje === '') {
+                    esValido = setFieldError('mensaje', 'error-mensaje', 'Describe brevemente el servicio o falla eléctrica.') && esValido;
+                } else if (mensaje.length < 10) {
+                    esValido = setFieldError('mensaje', 'error-mensaje', 'Por favor danos un poco más de detalle (mínimo 10 caracteres).') && esValido;
+                } else {
+                    setFieldError('mensaje', 'error-mensaje', '');
+                }
+
+                return esValido;
+            }
+
+            // Limpiar error en tiempo real mientras el usuario escribe o selecciona
+            const camposMonitoreados = ['nombre', 'telefono', 'email', 'tipoInmueble', 'servicio', 'fecha', 'direccion', 'mensaje'];
+            camposMonitoreados.forEach(campoId => {
+                const el = document.getElementById(campoId);
+                el.addEventListener('input', () => {
+                    if (!document.getElementById(`error-${campoId}`).classList.contains('hidden')) {
+                        validarFormularioCita();
+                    }
+                });
+            });
+
+            // Evento Submit del formulario
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                if (!validarFormularioCita()) {
+                    errorBanner.classList.remove('hidden');
+                    // Hacer scroll suave hacia el primer campo con error
+                    const primerError = form.querySelector('.border-red-500');
+                    if (primerError) {
+                        primerError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        primerError.focus();
+                    }
+                    return;
+                }
+
+                // Ocultar banner de error si todo está correcto
+                errorBanner.classList.add('hidden');
+
+                // Recopilar datos validados
+                const datos = {
+                    nombre: document.getElementById('nombre').value.trim(),
+                    telefono: document.getElementById('telefono').value.trim(),
+                    email: document.getElementById('email').value.trim(),
+                    tipoInmueble: document.getElementById('tipoInmueble').value,
+                    servicio: document.getElementById('servicio').value,
+                    fecha: document.getElementById('fecha').value,
+                    direccion: document.getElementById('direccion').value.trim(),
+                    mensaje: document.getElementById('mensaje').value.trim(),
+                };
+
+                // Generar número de radicado aleatorio
+                const numRadicado = 'EYL-' + Math.floor(1000 + Math.random() * 9000);
+                document.getElementById('radicado-badge').textContent = `Radicado #${numRadicado}`;
+
+                // Poblar resumen en el modal de confirmación
+                const resumenContainer = document.getElementById('resumen-cita');
+                resumenContainer.innerHTML = `
+                    <div class="flex justify-between border-b border-gray-200 pb-1.5">
+                        <span class="font-semibold text-gray-500">Cliente:</span>
+                        <span class="font-bold text-eyl-black text-right">${escapeHTML(datos.nombre)}</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-200 pb-1.5">
+                        <span class="font-semibold text-gray-500">Teléfono:</span>
+                        <span class="font-bold text-eyl-black text-right">${escapeHTML(datos.telefono)}</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-200 pb-1.5">
+                        <span class="font-semibold text-gray-500">Servicio:</span>
+                        <span class="font-bold text-eyl-electric text-right">${escapeHTML(datos.servicio)}</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-200 pb-1.5">
+                        <span class="font-semibold text-gray-500">Propiedad:</span>
+                        <span class="font-semibold text-eyl-black text-right">${escapeHTML(datos.tipoInmueble)}</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-200 pb-1.5">
+                        <span class="font-semibold text-gray-500">Fecha solicitada:</span>
+                        <span class="font-bold text-eyl-black text-right">${escapeHTML(datos.fecha)}</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="font-semibold text-gray-500">Ubicación (Ibagué):</span>
+                        <span class="font-semibold text-eyl-black text-right">${escapeHTML(datos.direccion)}</span>
+                    </div>
+                `;
+
+                // Configurar enlace directo a WhatsApp con los datos validados
+                const textoWhatsApp = `Hola *EyL Soluciones Eléctricas Ibagué*, acabo de agendar una cita desde la página web.%0A%0A` +
+                    `*Radicado:* ${numRadicado}%0A` +
+                    `*Nombre:* ${datos.nombre}%0A` +
+                    `*Teléfono:* ${datos.telefono}%0A` +
+                    `*Correo:* ${datos.email}%0A` +
+                    `*Propiedad:* ${datos.tipoInmueble}%0A` +
+                    `*Servicio:* ${datos.servicio}%0A` +
+                    `*Fecha preferida:* ${datos.fecha}%0A` +
+                    `*Dirección/Barrio:* ${datos.direccion}%0A` +
+                    `*Detalle:* ${datos.mensaje}`;
+
+                document.getElementById('btn-enviar-whatsapp').href = `https://wa.me/573045779006?text=${textoWhatsApp}`;
+
+                // Mostrar modal de confirmación
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+
+                // Reiniciar formulario
+                form.reset();
+            });
+
+            // Cerrar modal de confirmación
+            function cerrarModal() {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+
+            btnCerrarModal.addEventListener('click', cerrarModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) cerrarModal();
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                    cerrarModal();
+                }
+            });
+        });
+
+        // Función global para preseleccionar un servicio al hacer clic desde las tarjetas
+        function seleccionarServicio(nombreServicio) {
+            const selectServicio = document.getElementById('servicio');
+            if (selectServicio) {
+                selectServicio.value = nombreServicio;
+            }
+        }
+
+        // Función de sanitización básica para renderizar texto seguro en el resumen
+        function escapeHTML(str) {
+            return str.replace(/[&<>'"]/g, tag => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                "'": '&#39;',
+                '"': '&quot;'
+            }[tag]));
+        }
+    </script>
+</body>
+</html>
