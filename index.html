@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1c34">
+  <meta name="description" content="EyL Soluciones Eléctricas Ibagué: instalaciones, reparaciones, diagnóstico e iluminación. Seguridad, calidad y profesionalismo en cada trabajo.">
+  <title>EyL Soluciones Eléctricas Ibagué | Tu energía, en buenas manos</title>
+  <style>
+    :root {
+      --navy: #0b1c34;
+      --blue: #145da0;
+      --blue-bright: #2478c7;
+      --yellow: #ffc928;
+      --ink: #172335;
+      --muted: #64748b;
+      --white: #fff;
+      --pale: #f3f7fb;
+      --line: #dce5ef;
+      --radius: 18px;
+      --shadow: 0 18px 45px rgba(11, 28, 52, .12);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--white); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; }
+    a { color: inherit; }
+    button, input, select, textarea { font: inherit; }
+    .container { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    .topbar { background: var(--navy); color: #e8f0fa; font-size: .88rem; }
+    .topbar-inner { min-height: 40px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .topbar a { text-decoration: none; }
+    .topbar a:hover { color: var(--yellow); }
+    header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.96); border-bottom: 1px solid rgba(220,229,239,.8); backdrop-filter: blur(12px); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--navy); font-weight: 850; line-height: 1.15; letter-spacing: -.03em; }
+    .brand-mark { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 13px; color: var(--navy); background: var(--yellow); font-size: 1.2rem; }
+    .brand small { display: block; margin-top: 4px; color: var(--muted); font-size: .68rem; font-weight: 700; letter-spacing: .12em; }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a { text-decoration: none; font-size: .94rem; font-weight: 700; }
+    .nav-links a:hover { color: var(--blue-bright); }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 48px; padding: 0 20px; border: 0; border-radius: 10px; background: var(--yellow); color: var(--navy); font-weight: 800; text-decoration: none; cursor: pointer; transition: transform .2s, box-shadow .2s, background .2s; }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 9px 22px rgba(255,201,40,.28); background: #ffd84e; }
+    .button-blue { color: white; background: var(--blue); }
+    .button-blue:hover { background: var(--blue-bright); box-shadow: 0 9px 22px rgba(20,93,160,.25); }
+    .hero { position: relative; overflow: hidden; color: white; background: linear-gradient(115deg, rgba(7,22,43,.96), rgba(15,55,96,.86)), radial-gradient(circle at 78% 45%, #2478c7, #0b1c34 60%); }
+    .hero::after { content: ""; position: absolute; width: 420px; height: 420px; right: -130px; top: -150px; border: 1px solid rgba(255,255,255,.13); border-radius: 50%; box-shadow: 0 0 0 45px rgba(255,255,255,.035), 0 0 0 90px rgba(255,255,255,.025); }
+    .hero-inner { position: relative; z-index: 1; min-height: 530px; display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; gap: 48px; padding-block: 70px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--yellow); font-weight: 850; font-size: .79rem; letter-spacing: .15em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 25px; height: 2px; background: currentColor; }
+    h1 { max-width: 700px; margin: 18px 0 14px; font-size: clamp(2.4rem, 5vw, 4.5rem); line-height: 1.05; letter-spacing: -.055em; }
+    .hero h1 span { color: var(--yellow); }
+    .hero-copy { max-width: 590px; margin: 0 0 26px; color: #d8e5f4; font-size: 1.12rem; }
+    .hero-actions { display: flex; gap: 13px; align-items: center; flex-wrap: wrap; }
+    .hero .button-outline { border: 1px solid rgba(255,255,255,.35); background: transparent; color: white; }
+    .hero .button-outline:hover { background: rgba(255,255,255,.1); box-shadow: none; }
+    .hero-card { justify-self: end; width: min(100%, 340px); padding: 27px; border: 1px solid rgba(255,255,255,.18); border-radius: 22px; background: rgba(255,255,255,.09); box-shadow: 0 25px 60px rgba(0,0,0,.2); backdrop-filter: blur(12px); }
+    .bolt { display: grid; place-items: center; width: 58px; height: 58px; margin-bottom: 19px; border-radius: 17px; color: var(--navy); background: var(--yellow); font-size: 1.8rem; }
+    .hero-card h2 { margin: 0 0 8px; font-size: 1.3rem; }
+    .hero-card p { margin: 0; color: #d8e5f4; font-size: .95rem; }
+    .trust-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 30px; }
+    .trust-item { padding-left: 13px; border-left: 2px solid var(--yellow); }
+    .trust-item strong { display: block; font-size: .92rem; }
+    .trust-item span { color: #c3d2e3; font-size: .8rem; }
+    section { padding-block: 88px; }
+    .section-heading { max-width: 650px; margin: 0 auto 42px; text-align: center; }
+    .section-heading .eyebrow { color: var(--blue); }
+    h2 { margin: 12px 0; color: var(--navy); font-size: clamp(1.9rem, 3.4vw, 2.8rem); line-height: 1.15; letter-spacing: -.04em; }
+    .section-heading p { margin: 12px 0 0; color: var(--muted); }
+    .services { background: var(--pale); }
+    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .service-card { padding: 25px; border: 1px solid var(--line); border-radius: var(--radius); background: white; box-shadow: 0 7px 22px rgba(11,28,52,.04); transition: transform .2s, box-shadow .2s; }
+    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .service-icon { display: grid; place-items: center; width: 49px; height: 49px; margin-bottom: 16px; border-radius: 14px; background: #eaf3fc; color: var(--blue); font-size: 1.35rem; }
+    .service-card h3 { margin: 0 0 8px; color: var(--navy); font-size: 1.08rem; line-height: 1.35; }
+    .service-card p { margin: 0; color: var(--muted); font-size: .92rem; }
+    .about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 56px; align-items: center; }
+    .about-panel { position: relative; min-height: 330px; display: grid; place-items: center; overflow: hidden; border-radius: 24px; color: white; background: linear-gradient(145deg, #0b1c34, #145da0); }
+    .about-panel::before, .about-panel::after { content: ""; position: absolute; border: 1px solid rgba(255,255,255,.16); border-radius: 50%; }
+    .about-panel::before { width: 260px; height: 260px; }
+    .about-panel::after { width: 340px; height: 340px; }
+    .about-symbol { position: relative; z-index: 1; display: grid; place-items: center; width: 118px; height: 118px; border-radius: 32px; color: var(--navy); background: var(--yellow); font-size: 3.8rem; box-shadow: 0 15px 40px rgba(0,0,0,.2); }
+    .about-copy .eyebrow { color: var(--blue); }
+    .about-copy h2 { margin-top: 13px; }
+    .about-copy p { color: var(--muted); }
+    .checks { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0; margin: 23px 0 0; list-style: none; }
+    .checks li { display: flex; gap: 9px; align-items: flex-start; font-weight: 700; font-size: .92rem; }
+    .checks li span { color: var(--blue); font-weight: 900; }
+    .contact { color: white; background: var(--navy); }
+    .contact .section-heading h2 { color: white; }
+    .contact .section-heading p { color: #c3d2e3; }
+    .contact .section-heading .eyebrow { color: var(--yellow); }
+    .contact-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 28px; align-items: start; }
+    .contact-info { padding: 28px; border: 1px solid rgba(255,255,255,.14); border-radius: var(--radius); background: rgba(255,255,255,.055); }
+    .contact-info h3 { margin: 0 0 8px; font-size: 1.35rem; }
+    .contact-info > p { margin: 0 0 23px; color: #c3d2e3; }
+    .contact-detail { display: flex; gap: 14px; align-items: flex-start; margin-top: 20px; }
+    .contact-detail .service-icon { flex: 0 0 43px; width: 43px; height: 43px; margin: 0; color: var(--yellow); background: rgba(255,255,255,.1); }
+    .contact-detail strong { display: block; margin-bottom: 2px; }
+    .contact-detail a, .contact-detail span { color: #d8e5f4; text-decoration: none; overflow-wrap: anywhere; }
+    .contact-detail a:hover { color: var(--yellow); }
+    form { padding: 30px; border-radius: var(--radius); color: var(--ink); background: white; box-shadow: var(--shadow); }
+    form h3 { margin: 0 0 5px; color: var(--navy); font-size: 1.45rem; }
+    .form-intro { margin: 0 0 22px; color: var(--muted); font-size: .92rem; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .field-full { grid-column: 1 / -1; }
+    label { color: var(--navy); font-size: .87rem; font-weight: 750; }
+    input, select, textarea { width: 100%; padding: 12px 13px; border: 1px solid var(--line); border-radius: 9px; outline: none; color: var(--ink); background: white; }
+    input:focus, select:focus, textarea:focus { border-color: var(--blue-bright); box-shadow: 0 0 0 3px rgba(36,120,199,.13); }
+    textarea { min-height: 105px; resize: vertical; }
+    .form-note { margin: 13px 0 0; color: var(--muted); font-size: .78rem; }
+    .form-message { display: none; margin-top: 16px; padding: 12px 14px; border-radius: 9px; color: #14532d; background: #eaf8ef; font-weight: 650; font-size: .9rem; }
+    .form-message.show { display: block; }
+    footer { padding-block: 22px; color: #c3d2e3; background: #071426; font-size: .87rem; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+    footer a { color: white; text-decoration: none; }
+    footer a:hover { color: var(--yellow); }
+    @media (max-width: 820px) {
+      .nav-links { gap: 16px; }
+      .hero-inner { grid-template-columns: 1fr .72fr; gap: 25px; }
+      .hero-card { padding: 22px; }
+      .service-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-grid { gap: 32px; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 620px) {
+      .container { width: min(100% - 30px, 1120px); }
+      .topbar-inner { justify-content: center; padding-block: 7px; }
+      .nav { min-height: 68px; }
+      .nav-links { display: none; }
+      .nav > .button { min-height: 42px; padding-inline: 13px; font-size: .86rem; }
+      .brand-mark { width: 40px; height: 40px; }
+      .hero-inner { min-height: auto; grid-template-columns: 1fr; padding-block: 64px; }
+      .hero-card { justify-self: stretch; width: 100%; }
+      .trust-row { gap: 9px; }
+      .trust-item { padding-left: 9px; }
+      .trust-item strong { font-size: .8rem; }
+      .trust-item span { font-size: .72rem; }
+      section { padding-block: 66px; }
+      .section-heading { margin-bottom: 30px; }
+      .service-grid { grid-template-columns: 1fr; gap: 13px; }
+      .service-card { padding: 21px; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-panel { min-height: 245px; }
+      .checks { grid-template-columns: 1fr; }
+      .contact-info, form { padding: 23px 19px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field-full { grid-column: auto; }
+      .form-grid .button { width: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Servicio eléctrico con seguridad y confianza en Ibagué</span>
+      <span><a href="tel:+573045779006">304 577 9006</a> &nbsp;·&nbsp; <a href="mailto:eylsolucionessas@gmail.com">eylsolucionessas@gmail.com</a></span>
+    </div>
+  </div>
+  <header>
+    <nav class="container nav" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="EyL Soluciones Eléctricas Ibagué, inicio">
+        <span class="brand-mark" aria-hidden="true">⚡</span>
+        <span>EyL SOLUCIONES<small>ELÉCTRICAS · IBAGUÉ</small></span>
+      </a>
+      <div class="nav-links">
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <a class="button" href="#contacto">Solicitar cita <span aria-hidden="true">→</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-inner">
+        <div>
+          <span class="eyebrow">EyL Soluciones Eléctricas Ibagué</span>
+          <h1>SEGURIDAD, CALIDAD Y PROFESIONALISMO <span>EN CADA TRABAJO.</span></h1>
+          <p class="hero-copy">Tu energía, en buenas manos. Soluciones eléctricas confiables para tu hogar y negocio, con atención responsable y trabajo bien hecho.</p>
+          <div class="hero-actions">
+            <a class="button" href="#contacto">Agenda tu servicio <span aria-hidden="true">→</span></a>
+            <a class="button button-outline" href="tel:+573045779006">Llámanos: 304 577 9006</a>
+          </div>
+          <div class="trust-row" aria-label="Nuestros compromisos">
+            <div class="trust-item"><strong>Seguridad</strong><span>Primero en cada visita</span></div>
+            <div class="trust-item"><strong>Calidad</strong><span>Soluciones confiables</span></div>
+            <div class="trust-item"><strong>Profesionalismo</strong><span>Atención responsable</span></div>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <div class="bolt" aria-hidden="true">⚡</div>
+          <h2>¿Necesitas un electricista?</h2>
+          <p>Cuéntanos qué necesitas y coordinaremos contigo la atención de tu servicio en Ibagué.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="services" id="servicios">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Lo que hacemos</span>
+          <h2>Soluciones eléctricas para cada necesidad</h2>
+          <p>Atendemos trabajos eléctricos residenciales y comerciales con enfoque en seguridad, orden y calidad.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card"><div class="service-icon" aria-hidden="true">⌂</div><h3>Instalaciones residenciales y comerciales</h3><p>Instalación y adecuación eléctrica para hogares, locales y oficinas.</p></article>
+          <article class="service-card"><div class="service-icon" aria-hidden="true">⌁</div><h3>Diagnóstico y reparación de fallas</h3><p>Revisión de problemas eléctricos y reparación para recuperar un funcionamiento confiable.</p></article>
+          <article class="service-card"><div class="service-icon" aria-hidden="true">⚠</div><h3>Detección de sobrecargas y riesgos</h3><p>Identificación de condiciones que pueden comprometer tus instalaciones y equipos.</p></article>
+          <article class="service-card"><div class="service-icon" aria-hidden="true">☼</div><h3>Iluminación y sistemas LED</h3><p>Instalación y actualización de iluminación eficiente para tus espacios.</p></article>
+          <article class="service-card"><div class="service-icon" aria-hidden="true">▤</div><h3>Tableros eléctricos</h3><p>Instalación, organización y revisión de tableros eléctricos.</p></article>
+          <article class="service-card"><div class="service-icon" aria-hidden="true">＋</div><h3>Otros trabajos eléctricos</h3><p>¿Tienes otro requerimiento? Contáctanos y cuéntanos qué solución buscas.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros">
+      <div class="container about-grid">
+        <div class="about-panel" aria-hidden="true"><div class="about-symbol">⚡</div></div>
+        <div class="about-copy">
+          <span class="eyebrow">Tu energía, en buenas manos</span>
+          <h2>Un servicio en el que puedes confiar</h2>
+          <p>En EyL Soluciones Eléctricas Ibagué trabajamos para ofrecerte atención clara y soluciones pensadas para las necesidades de tu espacio. Nuestro compromiso es hacer cada trabajo con seguridad, calidad y profesionalismo.</p>
+          <ul class="checks">
+            <li><span aria-hidden="true">✓</span> Atención residencial y comercial</li>
+            <li><span aria-hidden="true">✓</span> Servicio en Ibagué</li>
+            <li><span aria-hidden="true">✓</span> Comunicación directa</li>
+            <li><span aria-hidden="true">✓</span> Atención responsable</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Hablemos de tu proyecto</span>
+          <h2>Solicita tu cita</h2>
+          <p>Déjanos tus datos y el servicio que necesitas. Te contactaremos para coordinar.</p>
+        </div>
+        <div class="contact-grid">
+          <aside class="contact-info">
+            <h3>Estamos para ayudarte</h3>
+            <p>Comunícate directamente o completa el formulario para solicitar atención.</p>
+            <div class="contact-detail"><div class="service-icon" aria-hidden="true">☎</div><div><strong>Teléfonos</strong><a href="tel:+573045779006">304 577 9006</a><br><a href="tel:+573045845142">304 584 5142</a></div></div>
+            <div class="contact-detail"><div class="service-icon" aria-hidden="true">✉</div><div><strong>Correo electrónico</strong><a href="mailto:eylsolucionessas@gmail.com">eylsolucionessas@gmail.com</a></div></div>
+            <div class="contact-detail"><div class="service-icon" aria-hidden="true">⌖</div><div><strong>Ubicación de servicio</strong><span>Ibagué, Colombia</span></div></div>
+          </aside>
+          <form id="appointment-form" novalidate>
+            <h3>Cuéntanos qué necesitas</h3>
+            <p class="form-intro">Completa los campos y validaremos tu solicitud.</p>
+            <div class="form-grid">
+              <div class="field"><label for="name">Nombre completo *</label><input id="name" name="name" type="text" autocomplete="name" required minlength="2" placeholder="Tu nombre"></div>
+              <div class="field"><label for="phone">Teléfono *</label><input id="phone" name="phone" type="tel" autocomplete="tel" required pattern="[0-9+()\s-]{7,20}" placeholder="Ej. 300 123 4567"></div>
+              <div class="field"><label for="email">Correo electrónico *</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="nombre@correo.com"></div>
+              <div class="field"><label for="service">Servicio que necesitas *</label><select id="service" name="service" required><option value="">Selecciona un servicio</option><option>Instalación eléctrica</option><option>Diagnóstico o reparación</option><option>Detección de riesgos o sobrecargas</option><option>Iluminación o sistemas LED</option><option>Tablero eléctrico</option><option>Otro servicio</option></select></div>
+              <div class="field field-full"><label for="date">Fecha preferida (opcional)</label><input id="date" name="date" type="date"></div>
+              <div class="field field-full"><label for="details">Cuéntanos un poco más (opcional)</label><textarea id="details" name="details" placeholder="Describe brevemente el trabajo o la falla"></textarea></div>
+              <div class="field field-full"><button class="button button-blue" type="submit">Validar y solicitar cita <span aria-hidden="true">→</span></button></div>
+            </div>
+            <p class="form-note">* Campos obligatorios. Este formulario muestra una confirmación en esta página; para enviar la solicitud directamente, contáctanos por teléfono o correo.</p>
+            <div class="form-message" id="form-message" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> EyL Soluciones Eléctricas Ibagué. Todos los derechos reservados.</span>
+      <span>Seguridad, calidad y profesionalismo en cada trabajo.</span>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('appointment-form');
+    const message = document.getElementById('form-message');
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      message.classList.remove('show');
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      const customerName = document.getElementById('name').value.trim();
+      const service = document.getElementById('service').value;
+      if (customerName.length < 2) {
+        document.getElementById('name').setCustomValidity('Ingresa un nombre de al menos 2 caracteres.');
+        form.reportValidity();
+        document.getElementById('name').setCustomValidity('');
+        return;
+      }
+
+      message.textContent = `¡Gracias, ${customerName}! Tu solicitud para “${service}” fue validada. Para coordinar la cita, llámanos al 304 577 9006 o escríbenos a eylsolucionessas@gmail.com.`;
+      message.classList.add('show');
+      message.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  </script>
+</body>
+</html>
